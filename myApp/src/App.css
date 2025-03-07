@@ -1,0 +1,40 @@
+.app-container {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.app-header {
+  margin-bottom: 2rem;
+}
+
+.app-title {
+  font-size: 2.5rem;
+  color: #2c3e50;
+}
+
+.greeting {
+  color: #34495e;
+  margin-bottom: 1.5rem;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.option-card {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #bdc3c7;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.option-card input {
+  margin-right: 1rem;
+}
