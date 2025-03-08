@@ -1,11 +1,11 @@
 body {
-    background-color: rgba(193, 191, 188, 0.516);
+    background-color: rgb(206, 201, 193);
     margin: 0;
     padding: 0;
     width: 380px;
 }
 .container {
-    background-color: rgba(228, 227, 227, 0.831);
+    background-color: rgba(254, 250, 250, 0.831);
     width: 412px;
     height: 915px;
     display: flex;
