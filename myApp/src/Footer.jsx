@@ -1,6 +1,9 @@
 import React from 'react';
 import './Footer.css';
 import { FiHome, FiSearch, FiBell, FiMessageSquare } from 'react-icons/fi';
+import {GiSpeaker} from "react-icons/gi";
+import {FaMicrophone} from "react-icons/fa";
+import {RiCustomerService2Line} from "react-icons/ri"
 
 const Footer = () => {
   return (
@@ -11,16 +14,20 @@ const Footer = () => {
           <span>Home</span>
         </div>
         <div className="nav-item">
-          <FiSearch className="nav-icon" />
+          <GiSpeaker className="nav-icon" />
+          <span>Speaker</span>
+        </div>
+        <div className="nav-item">
+          <FaMicrophone className="nav-icon" />
           <span>Search</span>
         </div>
         <div className="nav-item">
           <FiBell className="nav-icon" />
-          <span>Notifications</span>
+          <span>notification</span>
         </div>
         <div className="nav-item">
-          <FiMessageSquare className="nav-icon" />
-          <span>Chat</span>
+          <RiCustomerService2Line className="nav-icon" />
+          <span>Customer Care</span>
         </div>
       </nav>
     </footer>
