@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { useAuth } from './context/AuthContext';
-import Header from './header'; // Ensure correct path
+import Header from './header';
 import './App.css';
 import Footer from './Footer';
+import { useNavigate } from 'react-router-dom';
 
 // Import images
 import visualImg from './assets/visual.png';
@@ -15,6 +16,7 @@ import othersImg from './assets/others.png';
 import examIcon from './assets/exam.png';
 import sathiIcon from './assets/friend.png';
 import comingSoonIcon from './assets/comingSoon.png';
+import chatboxIcon from './assets/chatbox.png';
 
 const SahayogiHaat = () => {
   const { user } = useAuth();
@@ -26,7 +28,7 @@ const SahayogiHaat = () => {
     assistType: '',
     offerPrice: ''
   });
-
+  const navigate = useNavigate();
   const categories = [
     { id: 'visual', label: 'Visually Impaired', image: visualImg },
     { id: 'handicap', label: 'Handicap', image: handicapImg },
@@ -56,6 +58,7 @@ const SahayogiHaat = () => {
       return;
     }
     console.log({ ...formData, date: selectedDate, category: selectedCategory, service: selectedService });
+    navigate('/FindSathi');
   };
 
   const handleInputChange = (e) => {
@@ -92,7 +95,9 @@ const SahayogiHaat = () => {
             ))}
           </div>
         </div>
-
+        <div className="chatbox">
+          <img src={chatboxIcon} alt="chatBox" className='chat'/>
+        </div>
         <div className="services">
           <h3 className='serv'>Our Services</h3>
           <div className="service">
@@ -142,6 +147,7 @@ const SahayogiHaat = () => {
               dateFormat="dd/MM/yyyy"
               placeholderText="Select date"
               className="date-picker"
+              required
             />
 
             <div className="price-input-group">
@@ -155,13 +161,16 @@ const SahayogiHaat = () => {
                 className="form-input"
                 required
               />
-            </div>
 
-            <button type="submit" className="submit-button">
-              Find Your Sathi
-            </button>
+            </div>
+            <div className="button" onClick={handleSubmit}>
+              Find your sathi
+            </div>
           </div>
         </form>
+        <div className="chatbox">
+          <img src={chatboxIcon} alt="chatBox" className='chat'/>
+        </div>
       </main>
       <Footer />
     </div>

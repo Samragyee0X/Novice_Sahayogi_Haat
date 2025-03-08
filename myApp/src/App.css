@@ -26,7 +26,9 @@
   color: #34495e;
   margin-bottom: 1.5rem;
 }
-
+.catagory-section {
+  width: 600px;
+}
 .category-card {
   display: flex;
   flex-direction: column;
@@ -70,7 +72,7 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
-  width: 100%;
+  width: 80%;
   padding: 50px;
   margin-top: 10px;
   height: 200px;
@@ -98,12 +100,12 @@
 
 .date-picker {
   height: 30px;
-  width: 250%;
+  width: 200%;
   padding: 10px 15px;
   font-size: 16px;
   border: 2px solid #ddd;
   border-radius: 8px;
-  margin-left: -80%;
+  margin-left: -55%;
 }
 
 input[type="number"] {
@@ -183,4 +185,39 @@ input[type="number"] {
   background-color: #f0f8ff;
   border-color: #007bff;
   box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+}
+
+.button {
+  width: 250px;
+  min-height: 60px;
+  height: auto; 
+  border: 1px solid black;
+  border-radius: 8px;
+  font-size: large;
+  font-weight: 500;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.chatbox {
+  display: block;
+  right: 10px;
+  bottom: 100px;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.chatbox img {
+  width: 50px;
 }

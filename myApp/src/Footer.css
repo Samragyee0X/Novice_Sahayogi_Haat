@@ -28,8 +28,14 @@
     align-items: center;
     color: #7f8c8d;
     font-size: 0.8rem;
+    cursor: pointer;
   }
   
+.nav-item:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
   .nav-icon {
     font-size: 1.5rem;
     margin-bottom: 5px;

@@ -7,6 +7,8 @@ import Login from './components/Login';
 import './index.css';
 import Register from './components/Register'
 import ResetPassword from './components/ResetPW';
+import FindSathi from './FindSathi';
+import UserProfile from './UserProfile';
 
 
 // Create a Protected Route component
@@ -23,6 +25,8 @@ const AppRouter = () => {
         <Routes>
         <Route path="/register" element={<Register />} />
         <Route path="/ResetPassword" element={<ResetPassword />} />
+        <Route path="/FindSathi" element={<FindSathi />} />
+        <Route path="/UserProfile" element={<UserProfile />} />
           <Route path="/login" element={<Login />} />
           <Route
             path="/"
