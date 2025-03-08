@@ -116,7 +116,7 @@ function App() {
 
       {/* Footer with "All Rights Reserved" */}
       <div className="footer">
-        <p>© 2023 | Sahayogi Haat | All Rights Reserved.</p>
+        <p>© 2025 | Sahayogi Haat | All Rights Reserved.</p>
       </div>
     </div>
   );
