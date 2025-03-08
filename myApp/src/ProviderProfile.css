@@ -1,93 +1,54 @@
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-  }
-  
-  h1 {
-    font-size: 24px;
-    color: #333;
-  }
-  
-  .services {
-    text-align: center;
-    margin: 20px 0;
-  }
-  
-  .services p {
-    margin: 5px 0;
-    font-size: 18px;
-  }
-  
-  .alert {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin: 20px 0;
-  }
-  
-  .alert h2 {
-    font-size: 20px;
-    color: #555;
-  }
-  
-  .alert button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .alert button:hover {
-    background-color: #0056b3;
-  }
-  
-  .requests {
-    width: 100%;
-    margin: 20px 0;
-  }
-  
-  .request {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .request h3 {
-    font-size: 18px;
-    color: #333;
-  }
-  
-  .request p {
-    font-size: 16px;
-    color: #555;
-  }
-  
-  .pricing {
-    text-align: center;
-    margin: 20px 0;
-  }
-  
-  .pricing p {
-    font-size: 18px;
-    color: #333;
-  }
-  
-  .navigation {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    margin: 20px 0;
-  }
-  
-  .navigation p {
-    font-size: 16px;
-    color: #555;
-  }
+.services-container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.services-container h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.services-container h2 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.services-container p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.service-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.service-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.service-header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.service-header span {
+  font-size: 14px;
+  color: #555;
+}
+
+.service-price {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.service-details div {
+  font-size: 14px;
+  margin-bottom: 5px;
+}

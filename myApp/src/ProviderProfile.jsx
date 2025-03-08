@@ -1,51 +1,45 @@
 import React from 'react';
-import styles from './ProviderProfile.css';
+import './ProviderPersonalinfo.css';
 
-function App() {
-  return (
-    <div className={styles.container}>
-      <h1>Our Services</h1>
-      <div className={styles.services}>
-        <p>exam</p>
-        <p>assistance</p>
-        <p>find your saath!</p>
-      </div>
-
-      <div className={styles.alert}>
-        <h2>Service request alert</h2>
-        <button>See all</button>
-      </div>
-
-      <div className={styles.requests}>
-        <div className={styles.request}>
-          <h3>Hari</h3>
-          <p>Requesting Service</p>
-          <p>4.8 (2)</p>
-        </div>
-        <div className={styles.request}>
-          <h3>Lalita</h3>
-          <p>Requesting Service</p>
-          <p>4.0 (5)</p>
-        </div>
-      </div>
-
-      <div className={styles.pricing}>
-        <p>Re.350</p>
-        <p>Re.500</p>
-      </div>
-
-      <div className={styles.navigation}>
-        <p>Access*</p>
-        <p>Access*</p>
-        <p>Home</p>
-        <p>speaker</p>
-        <p>Search</p>
-        <p>notification</p>
-        <p>Customer</p>
-        <p>data</p>
-      </div>
+const ServiceCard = ({ name, rating, price, accent, speaker, notification }) => (
+  <div className="service-card">
+    <div className="service-header">
+      <h3>{name} Requesting Service</h3>
+      <span>{rating} ({Math.floor(Math.random() * 10)})</span>
     </div>
-  );
-}
+    <div className="service-price">Rs.{price}</div>
+    <div className="service-details">
+      <div><strong>Accent</strong> {accent}</div>
+      <div><strong>Speaker</strong> {speaker}</div>
+      <div><strong>Notification</strong> {notification}</div>
+    </div>
+  </div>
+);
 
-export default App;
+const Services = () => (
+  <div className="services-container">
+    <h1>Our Services</h1>
+    <h2>exam assistance</h2>
+    <p>find your <strong>saathi</strong></p>
+    <h3>Service request alert</h3>
+    <p>See all</p>
+    <ServiceCard
+      name="Hari"
+      rating="4.8"
+      price="350"
+      accent="Home"
+      speaker="Search"
+      notification="Customer"
+    />
+    <ServiceCard
+      name="Lalita"
+      rating="4.0"
+      price="500"
+      accent="Home"
+      speaker="Search"
+      notification="Customer"
+    />
+  </div>
+);
+
+export default Services;
