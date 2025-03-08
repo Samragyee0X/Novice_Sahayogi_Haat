@@ -6,6 +6,7 @@ import Header from './header'; // Ensure correct path
 import './App.css';
 import Footer from './Footer';
 
+
 // Import images
 import visualImg from './assets/visual.png';
 import handicapImg from './assets/handicap.png';
@@ -15,6 +16,7 @@ import othersImg from './assets/others.png';
 import examIcon from './assets/exam.png';
 import sathiIcon from './assets/friend.png';
 import comingSoonIcon from './assets/comingSoon.png';
+import chatboxIcon from './assets/chatbox.png';
 
 const SahayogiHaat = () => {
   const { user } = useAuth();
@@ -92,7 +94,9 @@ const SahayogiHaat = () => {
             ))}
           </div>
         </div>
-
+        <div className="chatbox">
+          <img src={chatboxIcon} alt="chatBox" className='chat'/>
+        </div>
         <div className="services">
           <h3 className='serv'>Our Services</h3>
           <div className="service">
@@ -155,13 +159,16 @@ const SahayogiHaat = () => {
                 className="form-input"
                 required
               />
-            </div>
 
-            <button type="submit" className="submit-button">
-              Find Your Sathi
-            </button>
+            </div>
+            <div className="button" >
+              Find your sathi
+            </div>
           </div>
         </form>
+        <div className="chatbox">
+          <img src={chatboxIcon} alt="chatBox" className='chat'/>
+        </div>
       </main>
       <Footer />
     </div>
