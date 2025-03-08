@@ -9,7 +9,7 @@ const user = {
 
 function UserOrder() {
   return (
-    <div className="app">
+    <div className="container">
       <header className="header">
         <h1>Order Details</h1>
         <h2>History Timeline</h2>

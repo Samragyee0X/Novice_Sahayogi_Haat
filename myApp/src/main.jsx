@@ -4,7 +4,6 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import App from './App';
 import Login from './components/Login';
-import './index.css';
 import Register from './components/Register'
 import ResetPassword from './components/ResetPW';
 import FindSathi from './FindSathi';
