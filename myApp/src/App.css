@@ -6,7 +6,7 @@
 }
 
 .main-content {
-  padding: 50px 0 60px; /* Top padding = header height, Bottom padding = footer height */
+  padding: 50px 0 60px;
   min-height: 100vh;
   box-sizing: border-box;
   overflow-y: auto;
@@ -46,7 +46,7 @@
 .category-icon {
   width: 80px;
   height: 80px;
-  object-fit: cover; /* Changed from contain */
+  object-fit: cover;
   margin-bottom: 0.5rem;
 }
 
@@ -61,7 +61,7 @@
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Increased min size */
   gap: 1.5rem;
   margin: 2rem 0;
-  padding: 10px 15px; /* Add some side padding */
+  padding: 10px 15px;
 }
 
 .form-group {
@@ -76,18 +76,16 @@
   height: 200px;
 }
 
-/* For all text inputs */
 .form-input {
-  height: 45px; /* Increase height */
-  width: 100%; /* Full width */
-  padding: 12px 15px; /* Top/Bottom - Left/Right padding */
-  font-size: 16px; /* Text size */
+  height: 45px;
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 16px;
   border: 2px solid #ddd;
   border-radius: 8px;
-  box-sizing: border-box; /* Important for consistent sizing */
+  box-sizing: border-box;
 }
 
-/* For select dropdown */
 .form-select {
   height: 45px;
   width: 100%;
@@ -98,7 +96,6 @@
   background-color: white;
 }
 
-/* For date picker */
 .date-picker {
   height: 30px;
   width: 250%;
@@ -109,7 +106,6 @@
   margin-left: -80%;
 }
 
-/* For number input */
 input[type="number"] {
   height: 45px;
   padding: 10px 15px;
@@ -143,7 +139,12 @@ input[type="number"] {
   height: 100px;
 }
 
+.services {
+  width: 600px;
+}
+
 .service {
+  width: 600px;
   display: grid;
   grid-template-columns: repeat(3,1fr);
   gap: 20px;
@@ -156,6 +157,7 @@ input[type="number"] {
   height: 150px;
   width: 100px;
   padding: 1rem;
+  margin-left: 35px;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   transition: transform 0.2s;
