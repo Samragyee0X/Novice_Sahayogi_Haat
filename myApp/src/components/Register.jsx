@@ -8,6 +8,7 @@ const Register = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    username: '',
     password: '',
     confirmPassword: ''
   });
@@ -72,6 +73,18 @@ const Register = () => {
               name="email"
               placeholder="Email Address"
               value={formData.email}
+              onChange={handleChange}
+              required
+            />
+            <span className="input-icon">✉️</span>
+          </div>
+
+          <div className="input-group">
+            <input
+              type="username"
+              name="username"
+              placeholder="Username"
+              value={formData.username}
               onChange={handleChange}
               required
             />
