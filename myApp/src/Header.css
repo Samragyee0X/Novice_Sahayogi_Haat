@@ -47,6 +47,10 @@ header {
     border-radius: 5px;
   }
   
+  .sos-btn:hover {
+    background: #cc0000;
+  }
+
   .ambulance-icon {
     width: 20px;
     height: 20px;
@@ -77,4 +81,10 @@ header {
     width: 30px;
     height: 30px;
     margin-top: 2px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .location :hover{
+    transform: scale(1.1);
   }

@@ -15,6 +15,8 @@ import RoleSelectionPage from './components/RoleSelectionPage';
 import UserOrderDetail from './UserOrderDetails'
 import Terms from './TermsCondition'
 import Provider from './Provider'
+import Payment from './PaymentDetails'
+import ProvidersOrder from './ProviderOrderDetails';
 
 
 // Create a Protected Route component
@@ -38,6 +40,12 @@ const AppRouter = () => {
           <Route path="/UserOrderDetail" element={<UserOrderDetail />} />
           <Route path="/Terms" element={<Terms />} />
           <Route path="/Provider" element={<Provider />} />
+          <Route path="/ProvidersOrder" element={<ProvidersOrder />} />
+          <Route path="/Payment" element={
+            <ProtectedRoute>
+              <Payment />
+              </ProtectedRoute>
+            } />
           <Route path="/app" element={
             <ProtectedRoute>
               <App />

@@ -1,51 +1,130 @@
-import React from 'react';
-import styles from './ProviderProfile.css';
+import React, { useState } from 'react';
+import './Provider.css';
+import { useAuth } from './context/AuthContext';
+import Header from './header';
+import Footer from './Footer';
+import { useNavigate } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className={styles.container}>
-      <h1>Our Services</h1>
-      <div className={styles.services}>
-        <p>exam</p>
-        <p>assistance</p>
-        <p>find your saath!</p>
-      </div>
+import examIcon from './assets/exam.png';
+import sathiIcon from './assets/friend.png';
+import comingSoonIcon from './assets/comingSoon.png';
+import chatboxIcon from './assets/chatbox.png';
 
-      <div className={styles.alert}>
-        <h2>Service request alert</h2>
-        <button>See all</button>
-      </div>
+const Providers = () => {
+    const { user } = useAuth();
+    const navigate = useNavigate();
+    const [selectedServices, setSelectedServices] = useState(['exam', 'sathi']);
+    const [serviceRequests] = useState([
+        {
+            id: 1,
+            title: "Host Requesting Service",
+            user: "John Doe",
+            rating: 4.8,
+            reviews: 2,
+            price: 350,
+            status: "Pending"
+        },
+        {
+            id: 2,
+            title: "Last Requesting Service",
+            user: "Jane Smith",
+            rating: 4.0,
+            reviews: 5,
+            price: 500,
+            status: "In Progress"
+        }
+    ]);
+    
+    const services = [
+        { id: 'exam', icon: examIcon, text: 'Exam assistance' },
+        { id: 'sathi', icon: sathiIcon, text: 'Find your saathi' },
+        { id: 'comingSoon', icon: comingSoonIcon, text: 'Other Services Coming soon' }
+      ];
 
-      <div className={styles.requests}>
-        <div className={styles.request}>
-          <h3>Hari</h3>
-          <p>Requesting Service</p>
-          <p>4.8 (2)</p>
+    const handleServiceSelect = (serviceId) => {
+        // Prevent deselection of manual services
+        if (['exam', 'sathi'].includes(serviceId)) return;
+        
+        setSelectedServices(prev => {
+            if (prev.includes(serviceId)) {
+                return prev.filter(id => id !== serviceId);
+            }
+            return [...prev, serviceId];
+        });
+    };
+    const handleAcceptRequest = (requestId) => {
+        navigate(`/ProvidersOrder/${requestId}`);
+    };
+    return (
+        <div className="app-container">
+            <Header />
+            <main className="main-content">
+                <div className="user-greeting">
+                    {user && <p>Hey {user.username}, Welcome back!! You're logged in as a <b>service provider</b>...</p>}
+                </div>
+
+                <div className="ads">
+                    <img src="ads.png" alt="In-app Advertising Market" className="ads" />
+                </div>
+
+                <div className="categories-section">
+                    <h2 className='serv'>Services you are providing</h2>
+                    
+                    {/* Selected Services Display */}
+                    <div className="services-selection">
+                <div className="service">
+                    {services.map((service) => (
+                        <div
+                            key={service.id}
+                            className={`service-item ${
+                                selectedServices.includes(service.id) ? 'selected' : ''
+                            } ${
+                                ['exam', 'sathi'].includes(service.id) ? 'permanent-selected' : ''
+                            }`}
+                            onClick={() => handleServiceSelect(service.id)}
+                        >
+                            <img src={service.icon} alt={service.text} className='service-img' />
+                            <p>{service.text}</p>
+                            {['exam', 'sathi'].includes(service.id)}
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+                    {/* Service Requests Section */}
+                    <div className="service-requests">
+                        <h3>Service Requests</h3>
+                        {serviceRequests.map(request => (
+                            <div key={request.id} className="request-card">
+                                <div className="request-header">
+                                    <h4>{request.title}</h4>
+                                    <span className={`status-badge ${request.status.toLowerCase()}`}>
+                                        {request.status}
+                                    </span>
+                                </div>
+                                <div className="request-details">
+                                    <p>User: {request.user}</p>
+                                    <p>Rating: {request.rating} ({request.reviews} reviews)</p>
+                                    <p>Price: Rs.{request.price}</p>
+                                </div>
+                                <button className="action-button" onClick={() => {
+                                    if (request.status === 'Pending') {
+                                        handleAcceptRequest(request.id);
+                                    }
+                                }}>
+                                    {request.status === 'Pending' ? 'Accept Request' : 'View Details'}
+                                </button>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                <div className="chatbox">
+                    <img src={chatboxIcon} alt="chatBox" className='chat'/>
+                </div>
+            </main>
+            <Footer />
         </div>
-        <div className={styles.request}>
-          <h3>Lalita</h3>
-          <p>Requesting Service</p>
-          <p>4.0 (5)</p>
-        </div>
-      </div>
-
-      <div className={styles.pricing}>
-        <p>Re.350</p>
-        <p>Re.500</p>
-      </div>
-
-      <div className={styles.navigation}>
-        <p>Access*</p>
-        <p>Access*</p>
-        <p>Home</p>
-        <p>speaker</p>
-        <p>Search</p>
-        <p>notification</p>
-        <p>Customer</p>
-        <p>data</p>
-      </div>
-    </div>
-  );
+    );
 }
 
-export default App;
+export default Providers;
