@@ -5,6 +5,14 @@
   padding: 20px;
 }
 
+.main-content {
+  padding: 50px 0 60px; /* Top padding = header height, Bottom padding = footer height */
+  min-height: 100vh;
+  box-sizing: border-box;
+  overflow-y: auto;
+  width: 100%;
+}
+
 .app-header {
   margin-bottom: 2rem;
 }
@@ -37,4 +45,115 @@
 
 .option-card input {
   margin-right: 1rem;
+}
+
+.category-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.category-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.category-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: cover; /* Changed from contain */
+  margin-bottom: 0.5rem;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Increased min size */
+  gap: 1.5rem;
+  margin: 2rem 0;
+  padding: 10px 15px; /* Add some side padding */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  padding: 50px;
+  margin-top: 10px;
+  height: 200px;
+}
+
+/* For all text inputs */
+.form-input {
+  height: 45px; /* Increase height */
+  width: 100%; /* Full width */
+  padding: 12px 15px; /* Top/Bottom - Left/Right padding */
+  font-size: 16px; /* Text size */
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box; /* Important for consistent sizing */
+}
+
+/* For select dropdown */
+.form-select {
+  height: 45px;
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background-color: white;
+}
+
+/* For date picker */
+.date-picker {
+  height: 30px;
+  width: 250%;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  margin-left: -80%;
+}
+
+/* For number input */
+input[type="number"] {
+  height: 45px;
+  padding: 10px 15px;
+  font-size: 16px;
+}
+
+/* Optional: Hover/focus states */
+.form-input:hover,
+.form-select:hover,
+.date-picker:hover {
+  border-color: #007AFF;
+}
+
+.form-input:focus,
+.form-select:focus,
+.date-picker:focus {
+  outline: none;
+  border-color: #007AFF;
+  box-shadow: 0 0 0 3px rgba(0,122,255,0.1);
+}
+
+.price-input-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  gap: 10px;
+}
+
+.ads {
+  width: 100%;
+  height: 100px;
 }
