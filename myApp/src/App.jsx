@@ -12,13 +12,18 @@ import handicapImg from './assets/handicap.png';
 import verbalImg from './assets/verbal.png';
 import hearingImg from './assets/hearing.png';
 import othersImg from './assets/others.png';
+import examIcon from './assets/exam.png';
+import sathiIcon from './assets/friend.png';
+import comingSoonIcon from './assets/comingSoon.png';
 
 const SahayogiHaat = () => {
   const { user } = useAuth();
   const [selectedDate, setSelectedDate] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [selectedService, setSelectedService] = useState(null);
   const [formData, setFormData] = useState({
     activity: '',
-    assistType: '', // Changed to empty string
+    assistType: '',
     offerPrice: ''
   });
 
@@ -30,9 +35,27 @@ const SahayogiHaat = () => {
     { id: 'others', label: 'Others', image: othersImg }
   ];
 
+  const services = [
+    { id: 'exam', icon: examIcon, text: 'Exam assistance' },
+    { id: 'sathi', icon: sathiIcon, text: 'Find your saathi' },
+    { id: 'comingSoon', icon: comingSoonIcon, text: 'Other Services Coming soon' }
+  ];
+
+  const handleCategorySelect = (id) => {
+    setSelectedCategory(selectedCategory === id ? null : id);
+  };
+
+  const handleServiceSelect = (id) => {
+    setSelectedService(selectedService === id ? null : id);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log({ ...formData, date: selectedDate });
+    if (!selectedCategory || !selectedService) {
+      alert('Please select both a category and a service.');
+      return;
+    }
+    console.log({ ...formData, date: selectedDate, category: selectedCategory, service: selectedService });
   };
 
   const handleInputChange = (e) => {
@@ -45,25 +68,42 @@ const SahayogiHaat = () => {
   return (
     <div className="app-container">
       <Header />
-      
       <main className="main-content">
         <div className="user-greeting">
-          {user && <p>Hey {user ? user.username : 'Guest'}, Welcome back!! You're logged in as a service seeker...</p>}
+          {user && <p>Hey {user.username}, Welcome back!! You're logged in as a service seeker...</p>}
         </div>
+
         <div className="ads">
           <img src="ads.png" alt="ads" className="ads" />
         </div>
+
         <div className="categories-section">
-          <h2>Select an option</h2>
+          <h2 className='serv'>Select an option</h2>
           <div className="categories-grid">
             {categories.map((category) => (
-              <div className="category-card" key={category.id}>
-                <img 
-                  src={category.image} 
-                  alt={category.label}
-                  className="category-icon"
-                />
+              <div
+                key={category.id}
+                className={`category-card ${selectedCategory === category.id ? 'selected' : ''}`}
+                onClick={() => handleCategorySelect(category.id)}
+              >
+                <img src={category.image} alt={category.label} className="category-icon" />
                 <label>{category.label}</label>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="services">
+          <h3 className='serv'>Our Services</h3>
+          <div className="service">
+            {services.map((service) => (
+              <div
+                key={service.id}
+                className={`service-item ${selectedService === service.id ? 'selected' : ''}`}
+                onClick={() => handleServiceSelect(service.id)}
+              >
+                <img src={service.icon} alt={service.text} className='service-img' />
+                <p>{service.text}</p>
               </div>
             ))}
           </div>
@@ -74,7 +114,7 @@ const SahayogiHaat = () => {
             <input
               type="text"
               name="activity"
-              placeholder="Event"
+              placeholder="More detail about Event"
               value={formData.activity}
               onChange={handleInputChange}
               className="form-input"
@@ -88,7 +128,7 @@ const SahayogiHaat = () => {
               required
             >
               <option value="" disabled hidden>
-                Select an option
+                Select an option for your companion
               </option>
               <option value="+2">Person with +2</option>
               <option value="Scribe">Scriber</option>
@@ -113,6 +153,7 @@ const SahayogiHaat = () => {
                 value={formData.offerPrice}
                 onChange={handleInputChange}
                 className="form-input"
+                required
               />
             </div>
 
