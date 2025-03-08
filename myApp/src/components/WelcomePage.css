@@ -5,7 +5,7 @@ body {
     width: 380px;
 }
 .container {
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(228, 227, 227, 0.831);
     width: 412px;
     height: 915px;
     display: flex;
@@ -16,7 +16,7 @@ body {
 }
 
 .logo {
-    width: 200px;
+    width: 150px;
     margin: 10px;
     padding: 10px;
 
