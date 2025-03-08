@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import profileLogo from './assets/profile.png';
 import ambulanceIcon from './assets/urgent.png';
 import optionIcon from './assets/option.png';
-import searchIcon from './assets/search.png';
+import locationIcon from './assets/current_location.png';
 
 // Capitalize component name to Header
 const Header = () => {
@@ -29,8 +29,8 @@ const Header = () => {
         <p className="profile-text" onClick={handleUserProfile}>User Profile</p>
       </div>
       <div className="icons">
-        <div className="search">
-          <img src={searchIcon} alt="search" className="search" />
+        <div className="location">
+          <img src={locationIcon} alt="location" className="location" />
         </div>
         <div className="header-right">
           <button className="sos-btn" onClick={handleSOS}>
