@@ -31,15 +31,9 @@ const AppRouter = () => {
           <Route path="/select-role" element={<RoleSelectionPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/registerP" element={<RegisterP />} />
           <Route path="/reset-password" element={<ResetPassword />} />
 
           <Route path="/app" element={
-            <ProtectedRoute>
-              <App />
-            </ProtectedRoute>
-          } />
-          <Route path="/Provider" element={
             <ProtectedRoute>
               <App />
             </ProtectedRoute>

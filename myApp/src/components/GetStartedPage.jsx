@@ -14,7 +14,7 @@ const GetStartedPage = () => {
         </div>
         <h2>Welcome to सहयोगी Haat</h2>
         <h4>Our Support, Your Success</h4>
-        <div className="btn" onClick={() => navigate('/select-role')}>
+        <div className="btn" onClick={() => navigate('/register')}>
             Get Started
         </div>
     </div>
