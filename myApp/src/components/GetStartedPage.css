@@ -1,0 +1,36 @@
+.body {
+    background-color: rgb(187, 187, 187);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: white;
+    width: 412px;
+    height: 915px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+    margin-top: 0;
+}
+.logo {
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.btn {
+    padding: 12px 30px;
+  background-color: #1daf4e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn:hover{
+    transform: translateY(-2px);
+    background-color: #16843b;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}

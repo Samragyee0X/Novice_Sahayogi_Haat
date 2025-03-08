@@ -19,7 +19,7 @@ const Login = () => {
       // Add actual authentication API call here
       await new Promise(resolve => setTimeout(resolve, 1000)); // Simulated delay
       login(username);
-      navigate('/');
+      navigate('/app');
     } catch (err) {
       setError(err.message || 'Invalid credentials. Please try again.');
   console.error('Login error:', err);

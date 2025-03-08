@@ -1,0 +1,39 @@
+body {
+    background-color: rgb(159, 162, 165);
+    margin: 0;
+    padding: 0;
+}
+
+.role-selection {
+    width: 412px;
+    height: 915px;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.role-options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.role-btn {
+    padding: 12px 30px;
+  background-color: #1daf4e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.role-btn :hover{
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}

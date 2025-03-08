@@ -30,7 +30,7 @@ const Register = () => {
       
       // For demo, log user in directly after registration
       login(formData.name);
-      navigate('/');
+      navigate('/select-role');
     } catch (err) {
       setError(err.message || 'Registration failed. Please try again.');
     } finally {
@@ -46,7 +46,6 @@ const Register = () => {
   };
 
   return (
-    <div className="login-container">
       <div className="login-card">
         <div className="login-header">
           <img src={appLogo} alt="Sahayogi Haat" className="login-logo" />
@@ -114,7 +113,6 @@ const Register = () => {
           </div>
         </form>
       </div>
-    </div>
   );
 };
 
