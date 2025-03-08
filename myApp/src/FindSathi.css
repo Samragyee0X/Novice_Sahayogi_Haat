@@ -1,16 +1,21 @@
+
 .find-sathi-page {
     max-width: 600px;
+    height: 915px;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
+    background-color: #8e8e8e;
   }
   
   .loading-container {
+    background-color: white;
     margin: 40px 0;
   }
   
   .loading-spinner {
     width: 50px;
+    background-color: white;
     height: 50px;
     border: 5px solid #f3f3f3;
     border-top: 5px solid #63839d;
@@ -29,12 +34,14 @@
     border-radius: 15px;
     padding: 25px;
     margin: 20px 0;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 4px 4px 12px rgba(0,0,0,0.1);
     text-align: left;
+    background-color: white;
   }
   
   .sathi-details {
     margin: 15px 0;
+    background-color: white;
   }
   
   .rating {
@@ -77,6 +84,7 @@
   .no-sathi {
     margin: 40px 0;
     color: #666;
+    background-color: #fff;
   }
   
   .retry-button {

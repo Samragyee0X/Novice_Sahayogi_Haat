@@ -32,6 +32,7 @@ header {
     font-size: 1.2rem;
     text-decoration: none;
     color: #fff;
+    cursor: pointer;
   }
   
   .sos-btn {
@@ -63,6 +64,7 @@ header {
     width: 50%;
     margin: 0;
     padding: 0;
+    cursor: pointer;
   }
 
   .icons {
@@ -70,7 +72,7 @@ header {
     gap: 30px;
   }
 
-  .search {
+  .location{
     display: flex;
     width: 30px;
     height: 30px;

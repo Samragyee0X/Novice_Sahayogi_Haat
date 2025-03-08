@@ -12,6 +12,9 @@ import UserProfile from './UserProfile';
 import WelcomePage from './components/WelcomePage';
 import GetStartedPage from './components/GetStartedPage';
 import RoleSelectionPage from './components/RoleSelectionPage';
+import UserOrderDetail from './UserOrderDetails'
+import Terms from './TermsCondition'
+import Provider from './Provider'
 
 
 // Create a Protected Route component
@@ -32,7 +35,9 @@ const AppRouter = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/reset-password" element={<ResetPassword />} />
-
+          <Route path="/UserOrderDetail" element={<UserOrderDetail />} />
+          <Route path="/Terms" element={<Terms />} />
+          <Route path="/Provider" element={<Provider />} />
           <Route path="/app" element={
             <ProtectedRoute>
               <App />

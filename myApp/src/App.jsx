@@ -79,7 +79,7 @@ const SahayogiHaat = () => {
         </div>
 
         <div className="ads">
-          <img src="ads.png" alt="ads" className="ads" />
+          <img src="ads.png" alt="In-app Advertising Market" className="ads" />
         </div>
 
         <div className="categories-section">

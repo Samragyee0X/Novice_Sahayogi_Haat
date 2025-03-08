@@ -1,48 +1,87 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
 import './UserProfile.css';
+import { MdOutlinePerson3 } from "react-icons/md";
 
-const UserProfile = () => {
-  const navigate = useNavigate();
+function App() {
+  const [userInfo] = useState({
+    username: '',
+    has: '',
+    gender: '',
+    contactNumber: '',
+    educationLevel: '',
+    termsAccepted: false,
+  });
+
+  const [subscriptionStatus, setSubscriptionStatus] = useState('Free Tier'); // Default subscription status
+  const appVersion = 'v1.2.3'; // App version
+
+
+
+  const handleSubscriptionUpgrade = () => {
+    setSubscriptionStatus('Premium Tier'); // Simulate subscription upgrade
+    alert('Subscription upgraded to Premium!');
+  };
+
+
 
   return (
-    <div className="user-profile-container">
-      <header className="header">
-        <button onClick={() => navigate('/')}>← Home</button>
-        <h2>User Profile</h2>
-      </header>
-
-      <div className="profile-picture">
-        <div className="placeholder" />
+    <div className="dashboard">
+      {/* Profile Picture (Logo) */}
+      <div className="profile-header">
+        <div className="profile-picture">
+          <MdOutlinePerson3 className='profile'/>
+        </div>
       </div>
 
-      <form className="profile-form">
-        <input type="text" placeholder="User name" />
-        <input type="text" placeholder="Has" />
-        <input type="text" placeholder="Gender" />
-        <input type="text" placeholder="Contact number" />
-        <input type="text" placeholder="Education level" />
+      {/* App Version and Subscription Model */}
+      <div className="subscription-section">
+        <p><strong>Version:</strong> {appVersion}</p>
+        <p><strong>Subscription:</strong> {subscriptionStatus}</p>
+        {subscriptionStatus === 'Free Tier' && (
+          <button onClick={handleSubscriptionUpgrade}>Upgrade to Premium</button>
+        )}
+      </div>
 
-        <div className="terms">
-          <label>
-            <input type="checkbox" /> I accept all the terms and conditions
-          </label>
+      {/* User Details Form */}
+      <div className="user-info">
+        <div className="info-item">
+          <label>Username:</label>
+          <p>{userInfo.username}</p>
         </div>
 
-        <section className="upload-section">
-          <h3>Upload Document</h3>
-          <button className="upload-button">Portal for uploading document →</button>
-        </section>
+        <div className="info-item">
+          <label>Has:</label>
+          <p>{userInfo.has}</p>
+        </div>
 
-        <p className="note">
-          Note: The document with stamp of Nepal government or local municipality will only be considered valid.
-        </p>
-        <p className="note-nepali">
-          टिप्पणी: नेपाल सरकार वा स्थानीय नगरपालिका को छाप भएको कागजात मात्र वैध मानिन्छ।
-        </p>
-      </form>
+        <div className="info-item">
+          <label>Gender:</label>
+          <p>{userInfo.gender}</p>
+        </div>
+
+        <div className="info-item">
+          <label>Contact Number:</label>
+          <p>{userInfo.contactNumber}</p>
+        </div>
+
+        <div className="info-item">
+          <label>Education Level:</label>
+          <p>{userInfo.educationLevel}</p>
+        </div><br></br>
+      </div>
+      {/* Upload Document Section */}
+      <div className="upload-section">
+        <h2>Upload Document</h2>
+        <input type="file" id="documentUpload" />
+        <p>Note: The document with stamp of Nepal government or local municipality will only be considered valid.</p>
+      </div>
+
+      {/* Footer with "All Rights Reserved" */}
+      <div className="footer">
+        <p>© 2025 | Sahayogi Haat | All Rights Reserved.</p>
+      </div>
     </div>
   );
-};
+}
 
-export default UserProfile;
+export default App;
