@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { useAuth } from './context/AuthContext';
-import Header from './header'; // Ensure correct path
+import Header from './header';
 import './App.css';
 import Footer from './Footer';
-
+import { useNavigate } from 'react-router-dom';
 
 // Import images
 import visualImg from './assets/visual.png';
@@ -28,7 +28,7 @@ const SahayogiHaat = () => {
     assistType: '',
     offerPrice: ''
   });
-
+  const navigate = useNavigate();
   const categories = [
     { id: 'visual', label: 'Visually Impaired', image: visualImg },
     { id: 'handicap', label: 'Handicap', image: handicapImg },
@@ -58,6 +58,7 @@ const SahayogiHaat = () => {
       return;
     }
     console.log({ ...formData, date: selectedDate, category: selectedCategory, service: selectedService });
+    navigate('/FindSathi');
   };
 
   const handleInputChange = (e) => {
@@ -146,6 +147,7 @@ const SahayogiHaat = () => {
               dateFormat="dd/MM/yyyy"
               placeholderText="Select date"
               className="date-picker"
+              required
             />
 
             <div className="price-input-group">
@@ -161,7 +163,7 @@ const SahayogiHaat = () => {
               />
 
             </div>
-            <div className="button" >
+            <div className="button" onClick={handleSubmit}>
               Find your sathi
             </div>
           </div>

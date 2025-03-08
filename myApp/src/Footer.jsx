@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import { FiHome, FiSearch, FiBell, FiMessageSquare } from 'react-icons/fi';
+import { FiHome, FiBell } from 'react-icons/fi';
 import {GiSpeaker} from "react-icons/gi";
 import {FaMicrophone} from "react-icons/fa";
 import {RiCustomerService2Line} from "react-icons/ri"
@@ -19,7 +19,7 @@ const Footer = () => {
         </div>
         <div className="nav-item">
           <FaMicrophone className="nav-icon" />
-          <span>Search</span>
+          <span>Mic</span>
         </div>
         <div className="nav-item">
           <FiBell className="nav-icon" />

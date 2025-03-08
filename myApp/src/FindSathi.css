@@ -58,7 +58,7 @@
   }
   
   .connect-button {
-    background-color: #63839d;
+    background-color: #18a61d;
     color: white;
     border: none;
     padding: 12px 25px;
@@ -70,7 +70,7 @@
   }
   
   .connect-button:hover {
-    background-color: #4a6572;
+    background-color: #0f7134;
     transform: translateY(-2px);
   }
   

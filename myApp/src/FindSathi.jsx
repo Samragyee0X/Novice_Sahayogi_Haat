@@ -18,6 +18,7 @@ const FindSathi = () => {
           person: {
             name: 'Ramesh Shrestha',
             rating: '4.8 ★',
+            totalNoofReviews: '26',
             experience: '5 years experience',
             skills: ['Exam Assistance', 'Mobility Support', 'Sign Language'],
             contact: 'ramesh@example.com'
@@ -58,6 +59,7 @@ const FindSathi = () => {
           <h2>{sathiData.name}</h2>
           <div className="sathi-details">
             <p className="rating">{sathiData.rating}</p>
+            <p>Total Reviews: {sathiData.totalNoofReviews} </p>
             <p>{sathiData.experience}</p>
             <div className="skills">
               {sathiData.skills.map((skill, index) => (
