@@ -19,6 +19,7 @@
 
 
 .user-greeting {
+  align-items: center;
   color: #34495e;
   margin-bottom: 1.5rem;
 }
