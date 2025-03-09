@@ -55,6 +55,9 @@
   box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
 }
 
+.note {
+  color: red;
+}
 .categories-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Increased min size */

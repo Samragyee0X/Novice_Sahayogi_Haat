@@ -142,7 +142,7 @@ const SahayogiHaat = () => {
               <option value="Brailler">Brailler</option>
               <option value="Guide">Guide</option>
             </select>
-
+            <label className='note'>Note: The assistant's level must be lower than that of yours for exam giving.</label>
             <DatePicker
               selected={selectedDate}
               onChange={setSelectedDate}
