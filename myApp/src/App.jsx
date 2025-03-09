@@ -116,6 +116,9 @@ const SahayogiHaat = () => {
           </div>
         </div>
 
+<br></br>
+<br></br>
+<br></br>
         <form className="event-form" onSubmit={handleSubmit}>
           <div className="form-group">
             <input
@@ -125,7 +128,7 @@ const SahayogiHaat = () => {
               value={formData.activity}
               onChange={handleInputChange}
               className="form-input"
-            />
+            /><br></br>
 
             <select
               name="assistType"
@@ -170,6 +173,10 @@ const SahayogiHaat = () => {
             </div>
           </div>
         </form>
+        <br>
+        </br>
+        <br>
+        </br>
         <div className="chatbox">
           <img src={chatboxIcon} alt="chatBox" className='chat'/>
         </div>
