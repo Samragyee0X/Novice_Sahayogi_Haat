@@ -48,3 +48,11 @@ body {
     background-color: #295fb1;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+
+.login-button {
+    background-color: #4fa4f3;
+
+}
+ .login-button :hover {
+    background-color: #295fb1;
+ }

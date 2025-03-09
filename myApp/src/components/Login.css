@@ -2,6 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    max-width: 415px;
     min-height: 100vh;
     background-color: #63839d;
     padding: 15px;

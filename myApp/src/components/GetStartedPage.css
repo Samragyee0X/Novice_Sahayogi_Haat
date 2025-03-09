@@ -15,10 +15,15 @@
     height: auto;
   }
   
-  .btn {
-    width: 100%;
+  .GetStartedbtn {
+    height: 2rem;
+    text-align: center;
+    text-justify: auto;
+    padding: 5px;
+    width: 50%;
     max-width: 300px;
-    background-color: #5edc88;
+    background-color: #4fa4f3;
+    border-radius: 8px;
   }
   
   @media (max-width: 480px) {
@@ -35,24 +40,8 @@
     }
   }
 
-<<<<<<< HEAD
-.btn :hover{
+.GetStartedbtn :hover{
     transform: translateY(-2px);
-    background-color: #16843b;
+    background-color: #295fb1;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-=======
-.btn {
-    padding: 12px 30px;
-  background-color: #659fc3;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.btn:hover{
-    transform: translateY(-2px);
-    background-color: #44719e;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
->>>>>>> 5f822c57b443ccdecd0cff85e340b9b0b8774166
 }

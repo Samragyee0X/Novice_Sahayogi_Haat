@@ -14,7 +14,7 @@ const GetStartedPage = () => {
         </div>
         <h2 style={{ color: 'blue' }}>Welcome to सहयोगी Haat</h2>
         <h4>Our Support, Your Success</h4>
-        <div className="btn" onClick={() => navigate('/register')}>
+        <div className="GetStartedbtn" onClick={() => navigate('/register')}>
             Get Started
         </div>
     </div>
