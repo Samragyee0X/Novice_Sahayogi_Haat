@@ -53,8 +53,11 @@ const Providers = () => {
         });
     };
     const handleAcceptRequest = (requestId) => {
-        navigate(`/ProvidersOrder/${requestId}`);
-    };
+        const request = serviceRequests.find(r => r.id === requestId);
+        navigate('/provider-order-details', { 
+          state: { request } 
+        });
+      };
     return (
         <div className="app-container">
             <Header />
