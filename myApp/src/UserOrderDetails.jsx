@@ -15,7 +15,7 @@ function UserOrder() {
         <h2>History Timeline</h2>
       </header>
 
-      <div className="content">
+      <div className="contents">
         <p className="booking-info">
           {user.providerName} has booked you on {user.date} for {user.event} purpose.
         </p>
