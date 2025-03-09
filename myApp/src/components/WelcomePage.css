@@ -26,7 +26,7 @@ body {
     color: red;
 }
 .english {
-    color: green;
+    color: rgb(66, 144, 185);
 }
 .namaste {
     width: 200px;
@@ -36,7 +36,7 @@ body {
 }
 .welcome-btn {
     padding: 12px 30px;
-  background-color: #1daf4e;
+  background-color: #4fa4f3;
   color: white;
   border: none;
   border-radius: 8px;
@@ -45,6 +45,6 @@ body {
 
 .welcome-btn :hover{
     transform: translateY(-2px);
-    background-color: #178a3d;
+    background-color: #193968;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
