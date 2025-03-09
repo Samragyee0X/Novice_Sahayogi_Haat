@@ -35,8 +35,24 @@
     }
   }
 
+<<<<<<< HEAD
 .btn :hover{
     transform: translateY(-2px);
     background-color: #16843b;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+=======
+.btn {
+    padding: 12px 30px;
+  background-color: #659fc3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn:hover{
+    transform: translateY(-2px);
+    background-color: #44719e;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+>>>>>>> 5f822c57b443ccdecd0cff85e340b9b0b8774166
 }

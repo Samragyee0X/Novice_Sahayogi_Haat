@@ -12,7 +12,7 @@ const GetStartedPage = () => {
         <div className="content">
             <img src={appLogo} alt="Logo" className="logo" />
         </div>
-        <h2>Welcome to सहयोगी Haat</h2>
+        <h2 style={{ color: 'blue' }}>Welcome to सहयोगी Haat</h2>
         <h4>Our Support, Your Success</h4>
         <div className="btn" onClick={() => navigate('/register')}>
             Get Started
