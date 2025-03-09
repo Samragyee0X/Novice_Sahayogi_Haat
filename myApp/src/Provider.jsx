@@ -18,7 +18,7 @@ const Providers = () => {
         {
             id: 1,
             title: "Host Requesting Service",
-            user: "John Doe",
+            user: "Samragi Dhakal",
             rating: 4.8,
             reviews: 2,
             price: 350,
@@ -27,11 +27,11 @@ const Providers = () => {
         {
             id: 2,
             title: "Last Requesting Service",
-            user: "Jane Smith",
-            rating: 4.0,
-            reviews: 5,
-            price: 500,
-            status: "In Progress"
+            user: "null",
+            rating: NaN,
+            reviews: NaN,
+            price: NaN,
+            status: "null"
         }
     ]);
     

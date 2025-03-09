@@ -16,6 +16,7 @@ import Terms from './TermsCondition'
 import Provider from './Provider'
 import Payment from './PaymentDetails'
 import ProviderOrderDetails from './ProviderOrderDetails';
+import SOSPage from './SOSPage';
 
 
 // Create a Protected Route component
@@ -39,6 +40,7 @@ const AppRouter = () => {
           <Route path="/UserOrderDetail" element={<UserOrderDetail />} />
           <Route path="/Terms" element={<Terms />} />
           <Route path="/Provider" element={<Provider />} />
+          <Route path="/sos" element={<SOSPage />} />
           <Route path="/provider-order-details" element={<ProviderOrderDetails />} />
           <Route path="/Payment" element={
             <ProtectedRoute>
