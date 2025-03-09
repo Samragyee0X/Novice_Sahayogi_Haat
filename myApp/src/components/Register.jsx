@@ -51,7 +51,7 @@ const Register = () => {
         <div className="login-header">
           <img src={appLogo} alt="Sahayogi Haat" className="login-logo" />
           <h2>Create Account</h2>
-          <p>Join our community today</p>
+          <p className= "paraText">Join our community today</p>
         </div>
 
         <form onSubmit={handleSubmit} className="login-form">

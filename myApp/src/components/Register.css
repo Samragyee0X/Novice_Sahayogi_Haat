@@ -4,7 +4,6 @@
     width: 340px;
     height: 100vh;
   }
-
   .login-card {
     display: flex;
     flex-direction: column;
@@ -19,12 +18,16 @@
   }
   
   .login-header {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 2rem;
   }
   
   .login-logo {
     width: 70px;
+    height: auto;
     margin-bottom: 1rem;
   }
   
@@ -37,6 +40,10 @@
     color: #666;
   }
   
+  .paraText{
+    padding-left: 90px;
+  }
+
   .input-group {
     position: relative;
     margin-bottom: 1.5rem;
@@ -61,13 +68,13 @@
     right: 15px;
     top: 50%;
     transform: translateY(-50%);
-    color: #63839d;
+    color: #5b86a8;
   }
   
   .login-button {
     width: 80%;
     padding: 12px;
-    background-color: #391f51;
+    background-color: #3b72ba;
     color: white;
     border: none;
     border-radius: 8px;
@@ -77,9 +84,9 @@
   }
   
   .login-button:hover {
-    background-color: #2a1540;
+    background-color: #337d9d;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 12px rgba(76, 123, 150, 0.15);
   }
   
   .error-message {
