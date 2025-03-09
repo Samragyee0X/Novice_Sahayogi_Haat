@@ -173,6 +173,10 @@ const SahayogiHaat = () => {
             </div>
           </div>
         </form>
+        <br>
+        </br>
+        <br>
+        </br>
         <div className="chatbox">
           <img src={chatboxIcon} alt="chatBox" className='chat'/>
         </div>
