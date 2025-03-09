@@ -20,12 +20,12 @@ function PaymentDetails() {
       <div className="payment-options">
         <div className="option">
           <img src={khalti} alt="khalti" />
-          <p>Pay with Khatti</p>
+          <strong><p>Pay with Khalti</p></strong>
           <input type="radio" name="khalti" id="payment" />
         </div>
         <div className="option">
           <img src={cash} alt="cash" />
-          <p>Pay with cash</p>
+         <strong><p>Pay with Cash</p></strong> 
           <input type="radio" name="cash" id="payment" />
         </div>
       </div>
