@@ -125,7 +125,7 @@ const SahayogiHaat = () => {
               value={formData.activity}
               onChange={handleInputChange}
               className="form-input"
-            />
+            /><br></br>
 
             <select
               name="assistType"
