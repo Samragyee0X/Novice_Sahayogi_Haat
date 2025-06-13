@@ -20,9 +20,9 @@ Frontend:  ReactJs
 Other: GitHub for version control, Figma for design 
 
 👥 Team Members
-Samragi Dhakal
-Jenish Shrestha
-Mamta Pokhrel
+Samragi Dhakal, 
+Jenish Shrestha,
+Mamta Pokhrel,
 Karuna Silwal
 
 🚧 Status
